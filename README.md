@@ -18,5 +18,9 @@ initMixin主要完成数据的初始化和视图的初始化：<br>
 我们先忽略前面的一些逻辑判断，主要看两个地方：<br>
 1.数据代理，主要是将_data的数据代理到vm上，这样的话可以直接对vm上的数据进行修改;<br>
 2.数据observe，传入data；<br>
-我们先看看vue怎么对数据进行observe的
+我们先看看vue怎么对数据进行observe的，进入observe
 ![](https://github.com/jackfxq/vue-source/raw/master/images/5.png)
+在observe里返回的是ob，也就是Observer类的实例，我们看看Observer类是怎么定义的，进入Observer类
+![](https://github.com/jackfxq/vue-source/raw/master/images/6.png)
+如上图在对data进行observe时对数组进行了特殊的处理，这块我们先不看，先看一般情况下的处理，即调用this.walk(value)
+![](https://github.com/jackfxq/vue-source/raw/master/images/7.png)
