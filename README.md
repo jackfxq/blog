@@ -10,6 +10,7 @@ vue构造函数调用了this._init(options)方法，这个方法在initMixin中�
 initMixin主要完成数据的初始化和视图的初始化：<br> 
 1.数据初始化主要是数据的observe，在上图的initState中进行；<br> 
 2.视图的初始化在vm.$mount(vm.$options.el),其中vm为Vue的实例，watcher的设置也是在vm.$mount(vm.$options.el）中完成的；<br> 
+我们可以看到这里定义了beforeCreated和created这两个钩子函数。
 ## 数据初始化
 接着上面我们看看数据初始化都做了什么，进入initState
 ![](https://github.com/jackfxq/vue-source/raw/master/images/3.png)
@@ -24,3 +25,7 @@ initMixin主要完成数据的初始化和视图的初始化：<br>
 ![](https://github.com/jackfxq/vue-source/raw/master/images/6.png)
 如上图在对data进行observe时对数组进行了特殊的处理，这块我们先不看，先看一般情况下的处理，即调用this.walk(value)
 ![](https://github.com/jackfxq/vue-source/raw/master/images/7.png)
+walk主要对data的属性进行遍历，进入defineReactive
+![](https://github.com/jackfxq/vue-source/raw/master/images/8.png)
+可以看到Object.defineProperty是在这里对属性设置get和set的，其中get主要进行依赖收集，其实就是在收集视图渲染的watcher，后面会提到，set主要是数据更新时进行视图的更新<br>
+至此，数据的初始化就完成了，从上面的分析来看，数据的初始化主要的工作就是对数据进行observe。
