@@ -55,3 +55,14 @@ vm._watcher=new Watcher(vm,updateComponent,noop)
 ![](https://github.com/jackfxq/vue-source/raw/master/images/17.png)<br>
 这里调用了vm._update方法，其中传入的参数有vm._render()，_render函数主要的作用是产生虚拟DOM，进入_update
 ![](https://github.com/jackfxq/vue-source/raw/master/images/18.png)<br>
+这里主要是将虚拟DOM转化为真实DOM并进行挂载，分两种情况，分别是有旧的虚拟DOM和无旧的虚拟DOM，对应初始化时调用还是数据更新时调用
+到这里，视图的初始化和挂载也结束了，下面看看数据变化时视图是如何更新的
+## 数据变化时视图更新过程
+接着上面我们看看数据变化时视图是怎么变化的，在数据初始化的时候，我们知道数据变化时将触发set方法，如下图：
+![](https://github.com/jackfxq/vue-source/raw/master/images/19.png)<br>
+上图可以看出，set最后调用了dep.notify，进入notify
+![](https://github.com/jackfxq/vue-source/raw/master/images/20.png)<br>
+如上图，notify主要将收集的依赖，也就是收集的所有watcher，调用所有watcher的update方法，我们看看watcher的updata方法干了啥
+![](https://github.com/jackfxq/vue-source/raw/master/images/21.png)<br>
+这里就是调用了queueWatcher,进入queueWatcher
+![](https://github.com/jackfxq/vue-source/raw/master/images/22.png)<br>
