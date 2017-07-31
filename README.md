@@ -32,7 +32,12 @@ walk主要对data的属性进行遍历，进入defineReactive
 ## 视图挂载
 接着上面，在vue入口那里，我们知道视图的挂载主要是调用了vm.$mount(vm.$options.el)
 ![](https://github.com/jackfxq/vue-source/raw/master/images/9.png)<br>
-如图，所以我们进入vm.$mount，看看里面都干了啥，在源码里面有三处地方涉及到$mount
+如图，所以我们进入vm.$mount，看看里面都干了啥，在源码里面有两处地方涉及到$mount
 ![](https://github.com/jackfxq/vue-source/raw/master/images/10.png)<br>
+这是第一处，就是return mountComponent
 ![](https://github.com/jackfxq/vue-source/raw/master/images/11.png)<br>
 ![](https://github.com/jackfxq/vue-source/raw/master/images/12.png)<br>
+这是第二处，上面两个图是一起的，屏幕大小有限，所以截了两个图。。。<br>
+咱们看看第二处，里面做了一个处理，就是将template编译成render函数，在vue的教程里有render函数的使用，这里我们可以看出我们在组件里定义render函数会比定义template快，因为在定义template的组件挂载时多了一步将template编译成render函数；<br>
+第二处的return 还是调用了第一处，所以我们看看第一处调用的mountComponent方法，进入mountComponent
+![](https://github.com/jackfxq/vue-source/raw/master/images/13.png)<br>
