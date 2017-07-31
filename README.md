@@ -1,6 +1,6 @@
 # vue整体框架和主要流程分析
 本文对vue的整体框架和整体流程进行简要的分析，不对某些具体的细节进行分析，所有需要对vue有初步的认识，包括对Object.defineProperty、虚拟DOM有一定了解，本文不会对Object.defineProperty、虚拟DOM的原理和细节进行分析。
-vue大概的知识点有两个：<br>
+vue分两个部分：<br>
 1.采用Object.defineProperty进行数据的双向绑定；<br>
 2.采用虚拟DOM技术进行视图渲染；
 ## vue入口
