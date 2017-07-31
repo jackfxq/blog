@@ -29,3 +29,10 @@ walk主要对data的属性进行遍历，进入defineReactive
 ![](https://github.com/jackfxq/vue-source/raw/master/images/8.png)
 可以看到Object.defineProperty是在这里对属性设置get和set的，其中get主要进行依赖收集，其实就是在收集视图渲染的watcher，后面会提到，set主要是数据更新时进行视图的更新<br>
 至此，数据的初始化就完成了，从上面的分析来看，数据的初始化主要的工作就是对数据进行observe。
+## 视图挂载
+接着上面，在vue入口那里，我们知道视图的挂载主要是调用了vm.$mount(vm.$options.el)
+![](https://github.com/jackfxq/vue-source/raw/master/images/9.png)
+如图，所以我们进入vm.$mount，看看里面都干了啥，在源码里面有三处地方涉及到$mount
+![](https://github.com/jackfxq/vue-source/raw/master/images/10.png)
+![](https://github.com/jackfxq/vue-source/raw/master/images/11.png)
+![](https://github.com/jackfxq/vue-source/raw/master/images/12.png)
