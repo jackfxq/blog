@@ -66,3 +66,9 @@ vm._watcher=new Watcher(vm,updateComponent,noop)
 ![](https://github.com/jackfxq/vue-source/raw/master/images/21.png)<br>
 这里就是调用了queueWatcher,进入queueWatcher
 ![](https://github.com/jackfxq/vue-source/raw/master/images/22.png)<br>
+这里采用队列异步更新，就是讲=将watcher push进队列queue中，然后执行nextTick方法，进入nextTick
+![](https://github.com/jackfxq/vue-source/raw/master/images/23.png)<br>
+![](https://github.com/jackfxq/vue-source/raw/master/images/24.png)<br>
+上面两个图是一起的，屏幕大小有限，所以截了两个图。。。<br>
+这个部分有点难看，cb为传入的flushSchedulerQueue函数，执行timerFunc，将nextTickHander加入异步队列，执行nextTickHander，执行cb，既执行flushSchedulerQueue，进入flushSchedulerQueue
+![](https://github.com/jackfxq/vue-source/raw/master/images/25.png)<br>
