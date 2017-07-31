@@ -41,3 +41,15 @@ walk主要对data的属性进行遍历，进入defineReactive
 咱们看看第二处，里面做了一个处理，就是将template编译成render函数，在vue的教程里有render函数的使用，这里我们可以看出我们在组件里定义render函数会比定义template快，因为在定义template的组件挂载时多了一步将template编译成render函数；<br>
 第二处的return 还是调用了第一处，所以我们看看第一处调用的mountComponent方法，进入mountComponent
 ![](https://github.com/jackfxq/vue-source/raw/master/images/13.png)<br>
+![](https://github.com/jackfxq/vue-source/raw/master/images/14.png)<br>
+上面两个图是一起的，屏幕大小有限，所以截了两个图。。。<br>
+这里我们可以看到定义了两个钩子beforeMount和mount，中间调用了watcher，我们看一下这里watcher的定义，这里标注的不太好，挡住了。。。我们看看watcher的这行代码：<br>
+```javascript
+vm._watcher=new Watcher(vm,updateComponent,noop)
+```
+我们可以看到Watcher类主要传入了vm,updateComponent,noop三个参数，其中updateComponent的主要作用是将虚拟DOM转化为真实的DOM并进行挂载，具体的细节下面在讨论，我们下面看看Watcher类是怎么定义的，进入Watcher
+![](https://github.com/jackfxq/vue-source/raw/master/images/15.png)<br>
+这里我们注意两个地方，一个是this.getter的定义，这里就是上面传进来的updateComponent，还有就是执行this.get()，我们进入这个get方法
+![](https://github.com/jackfxq/vue-source/raw/master/images/16.png)<br>
+这里我们看到首先收集的依赖是当前watcher实例，然后调用getter方法也就是updateComponent方法，之前我们对updateComponent方法的作用进行了简单的说明，这里我们具体看看updateComponent都干了啥，进入updateComponent:
+![](https://github.com/jackfxq/vue-source/raw/master/images/17.png)<br>
