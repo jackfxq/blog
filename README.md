@@ -5,7 +5,7 @@ vue构造函数调用了this._init(options)方法，这个方法在initMixin中�
 initMixin主要完成数据的初始化和视图的初始化：<br> 
 1.数据初始化主要是数据的observe，在上图的initState中进行；<br> 
 2.视图的初始化在vm.$mount(vm.$options.el),其中vm为Vue的实例，watcher的设置也是在vm.$mount(vm.$options.el）中完成的；<br> 
-##数据初始化
+## 数据初始化
 接着上面我们看看数据初始化都做了什么，进入initState
 ![](https://github.com/jackfxq/vue-source/raw/master/images/3.png)
 这里我们主要对数据进行操作的是initData，传入的是vm，我们来具体看看initData：
