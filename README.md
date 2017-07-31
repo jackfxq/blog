@@ -53,3 +53,5 @@ vm._watcher=new Watcher(vm,updateComponent,noop)
 ![](https://github.com/jackfxq/vue-source/raw/master/images/16.png)<br>
 这里我们看到首先收集的依赖是当前watcher实例，然后调用getter方法也就是updateComponent方法，之前我们对updateComponent方法的作用进行了简单的说明，这里我们具体看看updateComponent都干了啥，进入updateComponent:
 ![](https://github.com/jackfxq/vue-source/raw/master/images/17.png)<br>
+这里调用了vm._update方法，其中传入的参数有vm._render()，_render函数主要的作用是产生虚拟DOM，进入_update
+![](https://github.com/jackfxq/vue-source/raw/master/images/18.png)<br>
