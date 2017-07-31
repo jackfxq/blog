@@ -1,4 +1,4 @@
-# vue-source
+# vue入口
 ![](https://github.com/jackfxq/vue-source/raw/master/images/1.png)
 vue构造函数调用了this._init(options)方法，这个方法在initMixin中，如上图所示，进入initMixin
 ![](https://github.com/jackfxq/vue-source/raw/master/images/2.png)
