@@ -72,3 +72,11 @@ vm._watcher=new Watcher(vm,updateComponent,noop)
 上面两个图是一起的，屏幕大小有限，所以截了两个图。。。<br>
 这个部分有点难看，cb为传入的flushSchedulerQueue函数，执行timerFunc，将nextTickHander加入异步队列，执行nextTickHander，执行cb，既执行flushSchedulerQueue，进入flushSchedulerQueue
 ![](https://github.com/jackfxq/vue-source/raw/master/images/25.png)<br>
+![](https://github.com/jackfxq/vue-source/raw/master/images/26.png)<br>
+上面两个图是一起的，屏幕大小有限，所以截了两个图。。。<br>
+主要看watcher.run(),进入watcher.run
+![](https://github.com/jackfxq/vue-source/raw/master/images/27.png)<br>
+执行了this.get()，即进入前面数据渲染和挂载的地方<br>
+到这里，vue整个的执行流程基本就结束了。
+## vue流程图
+盗用一下vue官网关于vue生命周期的图，对照之前的内容梳理一下
