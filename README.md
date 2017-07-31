@@ -79,5 +79,6 @@ vm._watcher=new Watcher(vm,updateComponent,noop)
 执行了this.get()，即进入前面数据渲染和挂载的地方<br>
 到这里，vue整个的执行流程基本就结束了。
 ## vue流程图
-盗用一下vue官网关于vue生命周期的图，对照之前的内容梳理一下：
+盗用一下vue官网关于vue生命周期的图，对照之前的内容梳理一下：<br>
 ![](https://github.com/jackfxq/vue-source/raw/master/images/vue.png)<br>
+对照上面的分析基本上可以找到各个钩子函数的位置，下面那个销毁的我就没用做分析了。。。
