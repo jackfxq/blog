@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ca7ebdd-8dc5-4dd2-a9e0-357a65e56301" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/process.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="5ca7ebdd-8dc5-4dd2-a9e0-357a65e56301" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +31,7 @@
               <caret line="8520" column="21" lean-forward="false" selection-start-line="8520" selection-start-column="21" selection-end-line="8520" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1497583236000" expanded="true" signature="240697:240706" ph="..." />
               </folding>
             </state>
           </provider>
@@ -250,15 +248,16 @@
       <updated>1501462273919</updated>
       <workItem from="1501462277101" duration="1876000" />
       <workItem from="1501466743695" duration="16827000" />
-      <workItem from="1502681269947" duration="15000" />
+      <workItem from="1502681269947" duration="174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18718000" />
+    <option name="totallyTimeSpent" value="18877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1658" y="69" width="1440" height="873" extended-state="0" />
+    <frame x="1658" y="69" width="1440" height="873" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -316,6 +315,7 @@
           <caret line="8520" column="21" lean-forward="false" selection-start-line="8520" selection-start-column="21" selection-end-line="8520" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1497583236000" expanded="true" signature="240697:240706" ph="..." />
           </folding>
         </state>
       </provider>
@@ -402,6 +402,7 @@
           <caret line="8520" column="21" lean-forward="false" selection-start-line="8520" selection-start-column="21" selection-end-line="8520" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1497583236000" expanded="true" signature="240697:240706" ph="..." />
           </folding>
         </state>
       </provider>
