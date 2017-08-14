@@ -6,6 +6,7 @@
 [vue源码中关于数组的处理](https://github.com/jackfxq/vue-source/issues/6) <br>
 ## 前端框架
 [zepto+简易前端模板搭建活动页面开发框架](https://github.com/jackfxq/vue-source/issues/4) <br>
+[基于zepto的组件系统搭建](https://github.com/jackfxq/vue-source/issues/8) <br>
 ## webpack
 [webpack打包后的js文件分析](https://github.com/jackfxq/vue-source/issues/5) <br>
 ## 设计模式
